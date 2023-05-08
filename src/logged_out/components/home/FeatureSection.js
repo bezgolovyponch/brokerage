@@ -111,7 +111,7 @@ function FeatureSection(props) {
           Specializations
         </Typography> */}
         <div className="container-fluid">
-          <Grid container spacing={calculateSpacing(width, theme)}>
+          <Grid container spacing={calculateSpacing(width, theme)} style={{marginTop: "0"}}>
             {features.map((element) => (
               <Grid
                 item
