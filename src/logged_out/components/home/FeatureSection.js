@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid, /* Typography  */} from "@mui/material";
 // import CodeIcon from "@mui/icons-material/Code";
 // import BuildIcon from "@mui/icons-material/Build";
 // import ComputerIcon from "@mui/icons-material/Computer";
@@ -107,9 +107,9 @@ function FeatureSection(props) {
   return (
     <div style={{ backgroundColor: "#FFFFFF" }}>
       <div className="container-fluid">
-        <Typography variant="h3" align="center" className="lg-mg-bottom" style={{ fontFamily: 'Bodoni '}}>
+        {/* <Typography variant="h3" align="center" className="lg-mg-bottom" style={{ fontFamily: 'Bodoni '}}>
           Specializations
-        </Typography>
+        </Typography> */}
         <div className="container-fluid">
           <Grid container spacing={calculateSpacing(width, theme)}>
             {features.map((element) => (

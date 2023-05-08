@@ -170,11 +170,47 @@ function Footer(props) {
                 <Box mb={1}>
                   <TextField
                     variant="outlined"
-                    multiline
-                    placeholder="Get in touch with us"
+                    placeholder="Name"
                     InputProps={{
                       className: classes.whiteBg,
-                      "aria-label": "Get in Touch",
+                      "aria-label": "Name",
+                    }}
+                    fullWidth
+                    required
+                  />
+                </Box>
+                <Box mb={1}>
+                  <TextField
+                    variant="outlined"
+                    placeholder="Phone"
+                    InputProps={{
+                      className: classes.whiteBg,
+                      "aria-label": "Phone",
+                    }}
+                    fullWidth
+                    required
+                  />
+                </Box>
+                <Box mb={1}>
+                  <TextField
+                    variant="outlined"
+                    placeholder="Email"
+                    InputProps={{
+                      className: classes.whiteBg,
+                      "aria-label": "Email",
+                    }}
+                    fullWidth
+                    required
+                  />
+                </Box>
+                <Box mb={1}>
+                  <TextField
+                    variant="outlined"
+                    multiline
+                    placeholder="Message"
+                    InputProps={{
+                      className: classes.whiteBg,
+                      "aria-label": "Message",
                     }}
                     rows={4}
                     fullWidth

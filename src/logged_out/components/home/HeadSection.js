@@ -100,14 +100,14 @@ function HeadSection(props) {
             >
               <div className={classNames(classes.containerFix, "container")}>
                 <Box display={"flex"} flexDirection={isWidthUpLg ? "row" : "column"}>
-                  <Grid item xs={12} md={5} order={{ xs: 2, md: 1 }}>
+                  <Grid item xs={12} md={5} paddingTop={isWidthUpLg ? "0" : "10px"} order={{ xs: 2, md: 1 }}>
                     <Box
                       display="flex"
                       flexDirection="column"
                       justifyContent="center"
                       height="100%"
                     >
-                      <Box mb={2} textAlign={isWidthUpLg ? "left" : "center"}>
+                      <Box mb={3} textAlign={isWidthUpLg ? "left" : "center"}>
                         <Typography  style={{ fontFamily: 'Bodoni ', color: "white" }} variant={isWidthUpLg ? "h3" : "h4"}>
                           LIAISON AND BROKERAGE
                         </Typography>
