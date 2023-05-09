@@ -45,7 +45,10 @@ const styles = theme => ({
         maxWidth: 720
       },
       [theme.breakpoints.up("lg")]: {
-        maxWidth: 1170
+        maxWidth: 1000
+      },
+      [theme.breakpoints.up("xl")]: {
+        maxWidth: 1370
       }
     },
     ".row": {

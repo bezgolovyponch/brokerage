@@ -49,7 +49,7 @@ function FeatureCard(props) {
           color: color,
           backgroundColor: "none", /* shadeColor(color, 0.5), */
           
-          padding: 12,
+          padding: 0,
         }}
       >
         {Icon}
