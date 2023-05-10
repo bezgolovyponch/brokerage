@@ -108,14 +108,14 @@ function HeadSection(props) {
                       height="100%"
                     >
                       <Box mb={3} textAlign={isWidthUpLg ? "left" : "center"}>
-                        <Typography  style={{ fontFamily: 'Bodoni ', color: "white" }} variant={isWidthUpLg ? "h3" : "h4"}>
+                        <Typography  style={{ fontFamily: 'Baskerville', color: "white" }} variant={isWidthUpLg ? "h3" : "h4"}>
                           LIAISON AND BROKERAGE
                         </Typography>
                       </Box>
                       <div>
                         <Box mb={3} textAlign={isWidthUpLg ? "left" : "center"}>
                           <Typography
-                          style={{ fontFamily: 'Bodoni ', color: "white" }} 
+                          style={{ fontFamily: 'Baskerville ', color: "white" }} 
                             variant={isWidthUpLg ? "h5" : "body1"}
                             color="textSecondary"
                           >

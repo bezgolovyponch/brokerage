@@ -24,7 +24,7 @@ const styles = theme => ({
     fontWeight: theme.typography.h6.fontWeight
   },
   brandText: {
-    fontFamily: "'Baloo Bhaijaan', cursive",
+    fontFamily: "'Bakersville'",
     fontWeight: 400
   },
   noDecoration: {
@@ -66,7 +66,7 @@ function NavBar(props) {
               display="inline"
               color="primary"
             >
-              Max
+              Fair 
             </Typography>
             <Typography
               variant="h4"
@@ -74,7 +74,7 @@ function NavBar(props) {
               display="inline"
               color="#DBAD65"
             >
-              Brokerage
+              Broker
             </Typography>
           </div>
           <div>

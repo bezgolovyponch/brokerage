@@ -18,6 +18,7 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import ExploreIcon from "@mui/icons-material/Explore";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 
+
 const iconSize = 80;
 
 const features = [
@@ -25,7 +26,7 @@ const features = [
     color: "#121F32",
 
     headline: "Yacht Sales",
-    font: "Bodoni",
+    font: "Baskerville",
     text: " Bespoke yacht sales services, catering to your specific needs and preferences. We specialize in high-end yachts and work with you to find the perfect vessel for your lifestyle and taste.",
     icon: <HandshakeIcon style={{ fontSize: iconSize }} />,
     mdDelay: "0",
@@ -34,7 +35,7 @@ const features = [
   {
     color: "#121F32",
     headline: "Yacht Management",
-    font: "Bodoni",
+    font: "Baskerville",
     text: "Maintenance, crew management, and financial services. We offer personalized attention and ensure that your yacht is always maintained to the highest standards.",
     icon: <ExploreIcon style={{ fontSize: iconSize }} />,
     mdDelay: "200",
@@ -43,7 +44,7 @@ const features = [
   {
     color: "#121F32",
     headline: "Charter Management",
-    font: "Bodoni",
+    font: "Baskerville",
     text: " We handle all aspects of marketing, booking, and managing your yacht's charter. We provide top-notch service and attention to detail, ensuring your guests have an unforgettable experience.",
     icon: <EventNoteIcon style={{ fontSize: iconSize }} />,
     mdDelay: "400",
@@ -121,11 +122,12 @@ function FeatureSection(props) {
                 data-aos-delay={isWidthUpMd ? element.mdDelay : element.smDelay}
                 key={element.headline}
               >
-                <FeatureCard
+                <FeatureCard style={{ fontFamily: props.font, color: props.fontColor }}
                   Icon={element.icon}
                   color={element.color}
                   headline={element.headline}
                   text={element.text}
+                  font={element.font}
                 />
               </Grid>
             ))}

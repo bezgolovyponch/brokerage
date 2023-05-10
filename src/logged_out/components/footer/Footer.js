@@ -164,7 +164,7 @@ function Footer(props) {
       />
       <div className={classes.footerInner}>
         <Grid container spacing={isWidthUpMd ? 10 : 5}>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={4} xl={4}>
             <form>
               <Box display="flex" flexDirection="column">
                 <Box mb={1}>
@@ -228,7 +228,7 @@ function Footer(props) {
             </form>
           </Grid>
           <Hidden lgDown>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid item xs={12} md={6} lg={4} xl={4}>
               <Box display="flex" justifyContent="center">
                 <div>
                   {infos.map((info, index) => (
@@ -258,13 +258,12 @@ function Footer(props) {
               </Box>
             </Grid>
           </Hidden>
-          <Grid item xs={12} md={6} lg={4}>
-            <Typography variant="h6" paragraph className="text-white">
+          <Grid item xs={12} md={6} lg={4} xl={4}>
+            <Typography variant="h4" style={{ fontFamily: "Baskerville" }}   paragraph className="text-white">
               About the Company
             </Typography>
-            <Typography style={{ color: "#8f9296" }} paragraph>
-              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-              euismod convallis velit, eu auctor lacus vehicula sit amet.
+            <Typography variant="h6" style={{ color: "white", fontFamily: "Baskerville" }} paragraph>We are a team of dedicated, highly communicative individuals who are committed to helping you find your dream yacht and crew, while building lasting relationships. Our focus is on creating meaningful connections, not just making quick sales. 
+            We understand that purchasing a yacht can be a stressful and complex experience. That's why we strive to make it as straightforward and transparent as possible, so that the beautiful experience of owning and using your dream boat is not ruined.
             </Typography>
             <Box display="flex">
               {socialIcons.map((socialIcon, index) => (
