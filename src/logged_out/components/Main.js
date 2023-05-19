@@ -32,7 +32,7 @@ function Main(props) {
   const selectHome = useCallback(() => {
     smoothScrollTop();
     document.title =
-      "FairBroker";
+      "Yacht Trade Partners ";
     setSelectedTab("Home");
   }, [setSelectedTab]);
 

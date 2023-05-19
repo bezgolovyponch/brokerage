@@ -36,7 +36,7 @@ function FeatureCard(props) {
       <Typography variant="h4" paragraph className={classes.baskervilleFont}>
         {headline}
       </Typography>
-      <Typography variant="h6" color="textSecondary" className={classes.baskervilleFont}>
+      <Typography variant="h5" color="textTitle" className={classes.baskervilleFont}>
         {text}
       </Typography>
     </Fragment>

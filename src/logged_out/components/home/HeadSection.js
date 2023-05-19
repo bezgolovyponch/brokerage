@@ -100,7 +100,7 @@ function HeadSection(props) {
             >
               <div className={classNames(classes.containerFix, "container")}>
                 <Box display={"flex"} flexDirection={isWidthUpLg ? "row" : "column"}>
-                  <Grid item xs={12} md={5} paddingTop={isWidthUpLg ? "0" : "10px"} order={{ xs: 2, md: 1 }}>
+                  <Grid item xs={12} md={5} paddingTop={isWidthUpLg ? "0" : "12px"} order={{ xs: 2, md: 1 }}>
                     <Box
                       display="flex"
                       flexDirection="column"
@@ -116,7 +116,7 @@ function HeadSection(props) {
                         <Box mb={3} textAlign={isWidthUpLg ? "left" : "center"}>
                           <Typography
                           style={{ fontFamily: 'Baskerville ', color: "white" }} 
-                            variant={isWidthUpLg ? "h5" : "body1"}
+                            variant={isWidthUpLg ? "h5" : "h6"}
                             color="textSecondary"
                           >
                             Experience the effortless luxury of buying or

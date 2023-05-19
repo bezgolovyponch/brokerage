@@ -14,6 +14,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import WaveBorder from "../../../shared/components/WaveBorder";
 import ColoredButton from "../../../shared/components/ColoredButton";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import emailjs from "emailjs-com";
 
 const styles = (theme) => ({
   footerInner: {
@@ -154,6 +155,7 @@ const socialIcons = [
 function Footer(props) {
   const { classes, theme } = props;
   const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <footer className="lg-p-top" id="footer">
@@ -165,10 +167,32 @@ function Footer(props) {
       <div className={classes.footerInner}>
         <Grid container spacing={isWidthUpMd ? 10 : 5}>
           <Grid item xs={12} md={6} lg={4} xl={4}>
-            <form>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                emailjs
+                  .sendForm(
+                    "service_test1",
+                    "template_cti1gfj",
+                    e.target,
+                    "FDgipbD-bbODkhERA"
+                  )
+                  .then(
+                    (result) => {
+                      console.log(result.text);
+                      // Handle success, such as showing a success message
+                    },
+                    (error) => {
+                      console.log(error.text);
+                      // Handle error, such as showing an error message
+                    }
+                  );
+              }}
+            >
               <Box display="flex" flexDirection="column">
                 <Box mb={1}>
                   <TextField
+                    name="name"
                     variant="outlined"
                     placeholder="Name"
                     InputProps={{
@@ -181,6 +205,7 @@ function Footer(props) {
                 </Box>
                 <Box mb={1}>
                   <TextField
+                    name="phone"
                     variant="outlined"
                     placeholder="Phone"
                     InputProps={{
@@ -193,6 +218,7 @@ function Footer(props) {
                 </Box>
                 <Box mb={1}>
                   <TextField
+                    name="email"
                     variant="outlined"
                     placeholder="Email"
                     InputProps={{
@@ -205,6 +231,7 @@ function Footer(props) {
                 </Box>
                 <Box mb={1}>
                   <TextField
+                    name="message"
                     variant="outlined"
                     multiline
                     placeholder="Message"
@@ -221,6 +248,7 @@ function Footer(props) {
                   color={theme.palette.common.white}
                   variant="outlined"
                   type="submit"
+                  style={{ marginTop: isMobile ? 40 : 0 }}
                 >
                   Send Message
                 </ColoredButton>
@@ -259,11 +287,29 @@ function Footer(props) {
             </Grid>
           </Hidden>
           <Grid item xs={12} md={6} lg={4} xl={4}>
-            <Typography variant="h4" style={{ fontFamily: "Baskerville" }}   paragraph className="text-white">
-              About the Company
-            </Typography>
-            <Typography variant="h6" style={{ color: "white", fontFamily: "Baskerville" }} paragraph>We are a team of dedicated, highly communicative individuals who are committed to helping you find your dream yacht and crew, while building lasting relationships. Our focus is on creating meaningful connections, not just making quick sales. 
-            We understand that purchasing a yacht can be a stressful and complex experience. That's why we strive to make it as straightforward and transparent as possible, so that the beautiful experience of owning and using your dream boat is not ruined.
+            {!isMobile && (
+              <Typography
+                variant="h4"
+                style={{ fontFamily: "Baskerville" }}
+                paragraph
+                className="text-white"
+              >
+                About us
+              </Typography>
+            )}
+            <Typography
+              variant="h6"
+              style={{ color: "white", fontFamily: "Baskerville" }}
+              paragraph
+            >
+              We are a team of dedicated, highly communicative individuals who
+              are committed to helping you find your dream yacht and crew, while
+              building lasting relationships. Our focus is on creating
+              meaningful connections, not just making quick sales. We understand
+              that purchasing a yacht can be a stressful and complex experience.
+              That's why we strive to make it as straightforward and transparent
+              as possible, so that the beautiful experience of owning and using
+              your dream boat is not ruined.
             </Typography>
             <Box display="flex">
               {socialIcons.map((socialIcon, index) => (
