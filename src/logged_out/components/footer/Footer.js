@@ -172,10 +172,10 @@ function Footer(props) {
                 e.preventDefault();
                 emailjs
                   .sendForm(
-                    "service_test1",
-                    "template_cti1gfj",
+                    "-",
+                    "-",
                     e.target,
-                    "FDgipbD-bbODkhERA"
+                    "-"
                   )
                   .then(
                     (result) => {
