@@ -166,7 +166,7 @@ function Footer(props) {
       />
       <div className={classes.footerInner}>
         <Grid container spacing={isWidthUpMd ? 10 : 5}>
-          <Grid item xs={12} md={6} lg={4} xl={4}>
+          <Grid item xs={12} md={4} lg={4} xl={4}>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -255,8 +255,8 @@ function Footer(props) {
               </Box>
             </form>
           </Grid>
-          <Hidden lgDown>
-            <Grid item xs={12} md={6} lg={4} xl={4}>
+          <Hidden >
+            <Grid item xs={12} md={4} lg={4} xl={4}>
               <Box display="flex" justifyContent="center">
                 <div>
                   {infos.map((info, index) => (
@@ -286,7 +286,7 @@ function Footer(props) {
               </Box>
             </Grid>
           </Hidden>
-          <Grid item xs={12} md={6} lg={4} xl={4}>
+          <Grid item xs={12} md={4} lg={4} xl={4}>
             {!isMobile && (
               <Typography
                 variant="h4"

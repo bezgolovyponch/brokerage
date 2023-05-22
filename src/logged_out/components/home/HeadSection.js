@@ -45,8 +45,8 @@ const styles = (theme) => ({
     [theme.breakpoints.up("lg")]: {
       paddingTop: theme.spacing(6),
       paddingBottom: theme.spacing(6),
-      paddingLeft: theme.spacing(6),
-      paddingRight: theme.spacing(6),
+      paddingLeft: theme.spacing(0),
+      paddingRight: theme.spacing(0),
     },
     width: "100%",
   },
@@ -90,7 +90,7 @@ function HeadSection(props) {
 
   return (
     <Fragment>
-      <div className={classNames(classes.wrapper)}>
+      <div  className={classNames(classes.wrapper)}>
         <div className={classNames("container-fluid", classes.container)}>
           <div display="flex" justifyContent="center" className="row">
             <div
