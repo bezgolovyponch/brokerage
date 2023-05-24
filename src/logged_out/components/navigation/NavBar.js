@@ -40,7 +40,7 @@ function NavBar(props) {
   const { classes } = props;
 
   const handleCallButton = () => {
-    window.location.href = "tel:+1234567890"; // Replace the phone number with the desired number to call
+    window.location.href = "tel:+448431228728"; // Replace the phone number with the desired number to call
   };
 
   return (
