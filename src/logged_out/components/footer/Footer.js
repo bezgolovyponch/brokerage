@@ -312,7 +312,7 @@ function Footer(props) {
               your dream boat is not ruined.
             </Typography>
             <Box display="flex">
-              {socialIcons.map((socialIcon, index) => (
+              {/* {socialIcons.map((socialIcon, index) => (
                 <Box key={index} mr={index !== socialIcons.length - 1 ? 1 : 0}>
                   <IconButton
                     aria-label={socialIcon.label}
@@ -323,7 +323,7 @@ function Footer(props) {
                     {socialIcon.icon}
                   </IconButton>
                 </Box>
-              ))}
+              ))} */}
             </Box>
           </Grid>
         </Grid>
